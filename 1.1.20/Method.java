@@ -10,7 +10,7 @@ public class Method {
             result = N * factorial(N - 1);
             return result;
     }
-    public static double log(){
+    public static double logarithm(){
          fact = Math.log(factorial(N));
          return fact;
     }
