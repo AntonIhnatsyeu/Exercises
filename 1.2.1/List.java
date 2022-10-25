@@ -1,15 +1,14 @@
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 public class List {
 
     private ArrayList<Line> list;
 
-    public List(){
+    public List() {
         this.list = new ArrayList<>();
     }
 
-    public void addList(Line line){
+    public void addList(Line line) {
         list.add(line);
     }
 
@@ -22,10 +21,11 @@ public class List {
     }
 
 
-    public void print(){
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+    public void print() {
+        for (Line p : list) {
+            System.out.println(p);
         }
+
     }
 
     public Line get(int i) {

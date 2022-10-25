@@ -1,5 +1,4 @@
 import java.awt.geom.Point2D;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -7,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         int N;
-        double max = 0;
+        double min = 1;
         double rast;
 
         List list = new List();
@@ -15,10 +14,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите количество точек: ");
         N = scanner.nextInt();
-        Line line = new Line();
 
         for (int i = 0; i < N; i++) {
-            line = new Line();
+            Line line = new Line();
             list.addList(line);
         }
         list.print();
@@ -27,11 +25,11 @@ public class Main {
             for (int j = i + 1; j < N; j++) {
                 rast = Point2D.distance(list.get(i).getX(), list.get(i).getY(), list.get(j).getX(), list.get(j).getY());
                 System.out.println(rast);
-                if(rast > max){
-                    max = rast;
+                if (rast < min) {
+                    min = rast;
                 }
             }
         }
-        System.out.println("Максимально расстояние = " + max);
+        System.out.println("Минимальное расстояние = " + min);
     }
 }

@@ -8,7 +8,7 @@ public class Main {
         x = scanner.nextDouble();
         System.out.println("Enter y: ");
         y = scanner.nextDouble();
-        if(x > 0 & x < 1 & y > 0 & y < 1){
+        if(x > 0 && x < 1 && y > 0 && y < 1){
             System.out.println("True");
         }
         else {
